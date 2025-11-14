@@ -12,3 +12,37 @@
 .btn-outline-black:active {
   box-shadow: none !important; /* optional */
 }
+/* --- Layout für Hauptbereich --- */
+.main-layout {
+  display: flex;
+}
+
+/* --- LTR (z. B. Deutsch, Englisch): Menü links --- */
+html[dir="ltr"] .local-menu {
+  order: 0;
+}
+html[dir="ltr"] .page-content {
+  order: 1;
+}
+
+/* --- RTL (z. B. Arabisch, Hebräisch): Menü rechts --- */
+html[dir="rtl"] .local-menu {
+  order: 1;
+  text-align: right;
+}
+html[dir="rtl"] .page-content {
+  order: 0;
+  text-align: right;
+}
+
+/* Menüoptik */
+.local-menu {
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+}
+html[dir="rtl"] .local-menu {
+  border-right: none;
+  border-left: 1px solid #ddd;
+  padding-left: 1rem;
+  padding-right: 0;
+}
