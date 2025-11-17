@@ -8,11 +8,10 @@
 
     <link rel="stylesheet" href="styles.css" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="resources/favicons/favicon-96x96.png"
-    />
+    <link rel="icon" type="image/png" href="resources/favicon-96x96.png" />
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="lib/DataTables/datables.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -115,30 +114,267 @@
 
         <!-- SEITENINHALT -->
         <section class="col-md-9 page-content">
-          <h1 id="start">CO₂-Footprint</h1>
-          <p>Hier soll später eine tolle Tabelle hin.</p>
-
-          <h2 id="tabelle">CO₂-Ausstoß großer Unternehmen</h2>
-          <table class="table table-striped">
-            <tr>
-              <th>Land</th>
-              <th>Unternehmen</th>
-              <th>Jährlicher CO₂ Ausstoß in Tonnen</th>
-            </tr>
-            <tr>
-              <td>Deutschland</td>
-              <td>Volkswagen</td>
-              <td>419,7</td>
-            </tr>
-            <tr>
-              <td>Frankreich</td>
-              <td>Renault</td>
-              <td>354,8</td>
-            </tr>
+          <table id="myTable" class="display">
+            <thead>
+              <tr>
+                <th>Land</th>
+                <th>Unternehmen</th>
+                <th>CO2-Ausstoß in Tonnen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Deutschland</td>
+                <td>Volkskraft AG</td>
+                <td>412.4</td>
+              </tr>
+              <tr>
+                <td>Frankreich</td>
+                <td>ÉnergieBleu SA</td>
+                <td>355.9</td>
+              </tr>
+              <tr>
+                <td>Spanien</td>
+                <td>Solaria Iberica</td>
+                <td>298.1</td>
+              </tr>
+              <tr>
+                <td>Italien</td>
+                <td>ItaliaCarbon Group</td>
+                <td>331.7</td>
+              </tr>
+              <tr>
+                <td>Niederlande</td>
+                <td>HollandEco NV</td>
+                <td>221.3</td>
+              </tr>
+              <tr>
+                <td>Belgien</td>
+                <td>BelChem Industries</td>
+                <td>246.8</td>
+              </tr>
+              <tr>
+                <td>Österreich</td>
+                <td>AlpenEnergy GmbH</td>
+                <td>187.5</td>
+              </tr>
+              <tr>
+                <td>Schweiz</td>
+                <td>SwissGreen AG</td>
+                <td>165.2</td>
+              </tr>
+              <tr>
+                <td>Norwegen</td>
+                <td>NordicOil ASA</td>
+                <td>512.9</td>
+              </tr>
+              <tr>
+                <td>Schweden</td>
+                <td>ScandiTech AB</td>
+                <td>208.7</td>
+              </tr>
+              <tr>
+                <td>Finnland</td>
+                <td>PolarEnergy Oy</td>
+                <td>199.4</td>
+              </tr>
+              <tr>
+                <td>Dänemark</td>
+                <td>DanPower A/S</td>
+                <td>176.3</td>
+              </tr>
+              <tr>
+                <td>Polen</td>
+                <td>PolCarbo SA</td>
+                <td>633.1</td>
+              </tr>
+              <tr>
+                <td>Tschechien</td>
+                <td>BohemiaMetal a.s.</td>
+                <td>302.7</td>
+              </tr>
+              <tr>
+                <td>Slowakei</td>
+                <td>SlovaSteel s.r.o.</td>
+                <td>284.3</td>
+              </tr>
+              <tr>
+                <td>Ungarn</td>
+                <td>MagyarEnergy Rt.</td>
+                <td>311.1</td>
+              </tr>
+              <tr>
+                <td>Kroatien</td>
+                <td>AdriaPetrol d.d.</td>
+                <td>144.2</td>
+              </tr>
+              <tr>
+                <td>Slowenien</td>
+                <td>GreenAlps d.o.o.</td>
+                <td>131.6</td>
+              </tr>
+              <tr>
+                <td>Portugal</td>
+                <td>LusitaniaPower SA</td>
+                <td>212.9</td>
+              </tr>
+              <tr>
+                <td>Irland</td>
+                <td>EmeraldEnergy Ltd.</td>
+                <td>176.4</td>
+              </tr>
+              <tr>
+                <td>Vereinigtes Königreich</td>
+                <td>BritEnergy PLC</td>
+                <td>784.3</td>
+              </tr>
+              <tr>
+                <td>USA</td>
+                <td>AmeriCarbon Corp</td>
+                <td>1553.9</td>
+              </tr>
+              <tr>
+                <td>Kanada</td>
+                <td>MapleOil Ltd.</td>
+                <td>647.2</td>
+              </tr>
+              <tr>
+                <td>Mexiko</td>
+                <td>AztecaEnergy SA</td>
+                <td>420.3</td>
+              </tr>
+              <tr>
+                <td>Brasilien</td>
+                <td>AmazoniaFuel SA</td>
+                <td>592.8</td>
+              </tr>
+              <tr>
+                <td>Argentinien</td>
+                <td>PampaIndustries SA</td>
+                <td>331.5</td>
+              </tr>
+              <tr>
+                <td>Chile</td>
+                <td>AndesMining Ltd.</td>
+                <td>388.1</td>
+              </tr>
+              <tr>
+                <td>Kolumbien</td>
+                <td>ColCarbón SA</td>
+                <td>452.0</td>
+              </tr>
+              <tr>
+                <td>Peru</td>
+                <td>IncaMetals Corp.</td>
+                <td>273.6</td>
+              </tr>
+              <tr>
+                <td>China</td>
+                <td>DragonIndustry Group</td>
+                <td>2804.7</td>
+              </tr>
+              <tr>
+                <td>Japan</td>
+                <td>NipponEnergy Ltd.</td>
+                <td>1144.2</td>
+              </tr>
+              <tr>
+                <td>Südkorea</td>
+                <td>KoreaSteel Corp</td>
+                <td>922.6</td>
+              </tr>
+              <tr>
+                <td>Indien</td>
+                <td>HimalayaCoal Ltd.</td>
+                <td>1873.4</td>
+              </tr>
+              <tr>
+                <td>Pakistan</td>
+                <td>PakPower Industries</td>
+                <td>455.8</td>
+              </tr>
+              <tr>
+                <td>Indonesien</td>
+                <td>JavaEnergy Co.</td>
+                <td>733.2</td>
+              </tr>
+              <tr>
+                <td>Malaysia</td>
+                <td>BorneoTech Bhd.</td>
+                <td>388.5</td>
+              </tr>
+              <tr>
+                <td>Thailand</td>
+                <td>SiamCarbon Co.</td>
+                <td>413.3</td>
+              </tr>
+              <tr>
+                <td>Vietnam</td>
+                <td>MekongIndustries</td>
+                <td>367.7</td>
+              </tr>
+              <tr>
+                <td>Australien</td>
+                <td>OutbackMining Ltd.</td>
+                <td>802.4</td>
+              </tr>
+              <tr>
+                <td>Neuseeland</td>
+                <td>KiwiEnergy Group</td>
+                <td>153.5</td>
+              </tr>
+              <tr>
+                <td>Südafrika</td>
+                <td>CapeCoal Holdings</td>
+                <td>943.2</td>
+              </tr>
+              <tr>
+                <td>Ägypten</td>
+                <td>NilePetro SA</td>
+                <td>512.1</td>
+              </tr>
+              <tr>
+                <td>Nigeria</td>
+                <td>LagosOil Corp</td>
+                <td>689.9</td>
+              </tr>
+              <tr>
+                <td>Algerien</td>
+                <td>DesertEnergy SA</td>
+                <td>534.8</td>
+              </tr>
+              <tr>
+                <td>Saudi-Arabien</td>
+                <td>ArabPetrol Group</td>
+                <td>1811.6</td>
+              </tr>
+              <tr>
+                <td>Vereinigte Arabische Emirate</td>
+                <td>EmiratesEnergy LLC</td>
+                <td>986.4</td>
+              </tr>
+              <tr>
+                <td>Katar</td>
+                <td>QatarGas Corp</td>
+                <td>712.5</td>
+              </tr>
+              <tr>
+                <td>Türkei</td>
+                <td>AnatoliaSteel AS</td>
+                <td>655.7</td>
+              </tr>
+              <tr>
+                <td>Israel</td>
+                <td>TelAvivTech Ltd.</td>
+                <td>239.4</td>
+              </tr>
+              <tr>
+                <td>Philippinen</td>
+                <td>ManilaEnergy Corp</td>
+                <td>324.8</td>
+              </tr>
+            </tbody>
           </table>
-
-          <h2 id="kontaktInfo">Kontaktinformationen</h2>
-          <p>Weitere Kontaktinfos finden Sie im Footer.</p>
         </section>
       </div>
     </main>
@@ -197,5 +433,16 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="lib/dataTables/dataTables.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#myTable").DataTable();
+      });
+    </script>
   </body>
 </html>

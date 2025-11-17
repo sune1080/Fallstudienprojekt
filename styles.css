@@ -43,6 +43,6 @@ html[dir="rtl"] .page-content {
 html[dir="rtl"] .local-menu {
   border-right: none;
   border-left: 1px solid #ddd;
-  padding-left: 1rem;
+  padding-left: rem;
   padding-right: 0;
 }
